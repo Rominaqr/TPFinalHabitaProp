@@ -1,0 +1,124 @@
+.container {
+    background-color: rgb(228, 217, 191);
+    margin-top: 20px;
+}
+
+a.button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 9px 20px;
+    color: black;
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+    padding: 20px 38px;
+}
+
+.contenedor-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 10px 0px 0px 0px;
+    background-color: #f3f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card img {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+}
+
+.contenido {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.contain-button{ 
+    margin:5px 5px 5px 5px;
+    display: flex;
+  flex-direction: row; 
+  align-items: flex-end; 
+  justify-content: flex-end; 
+  position: relative; 
+    height: 10vh; 
+
+
+}
+
+.grid-container-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,2fr));
+    gap: 10px;   
+    
+}
+
+.price{
+    text-align: right;
+}
+
+/***Carrusel***/
+.carrusel {
+    height: 35vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .carrusel-items {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 10px 0px;
+    margin: none;
+  }
+  
+  .carrusel-item {
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+    outline: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carrusel-item:hover {
+    transform: scale(1.2);
+  }

@@ -1,0 +1,517 @@
+/* inicio nav */
+.grid-container-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-container-nav>div {
+    height: 180px;
+    width: 255px;
+    align-items: center;
+    /* Centramos verticalmente el contenido */
+    border-radius: 5px;
+}
+
+.logo-nav {
+    max-height: 60% !important;
+    width: auto !important;
+    border-radius: 10%;
+}
+
+.div-nav-general {
+    align-items: center;
+    /* Centramos verticalmente el contenido */
+    display: flex;
+    justify-content: space-evenly;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+}
+
+.nombre-nav {
+    max-width: 80%;
+    max-height: 90%;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* fin nav */
+
+/* inicio main index */
+.selectorPrincipal {
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    grid-template-rows: repeat(1, 100%);
+    background-image: url('../IMG/img_fondo3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.imagenSP {
+    max-width: 1327px;
+    max-height: 850px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.selectorIn {
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    grid-template-rows: repeat(auto-fit, minmax(200, 2fr));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px;
+    border: 1px solid #ffffff00;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    align-items: center;
+    font-size: larger;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+.img-tarjeta {
+    max-width: 400px;
+    max-height: 400px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+div.img:hover {
+    border: 3px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    margin-top: 1%;
+    text-align: center;
+    color: rgb(8, 5, 5);
+
+}
+
+.tarj1 {
+
+    align-items: center;
+    /* Centramos verticalmente el contenido */
+}
+
+.tarj2 {
+
+    align-items: center;
+    /* Centramos verticalmente el contenido */
+}
+
+.mensaje {
+
+    background-color: white;
+    align-self: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.anunciar {
+    align-self: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btnAnunciar {
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.btnAnunciar:hover {
+    background-color: #008CBA;
+    color: white;
+    padding: 20px 38px;
+}
+
+/* fin main index*/
+
+/* inicio main publicar*/
+
+.txt-center {
+    text-align: center;
+}
+
+.mainPublicar {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    margin: 2%;
+}
+
+.formPublicar {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+
+}
+
+.formA {
+    display: flex;
+    /* Para que los formularios se alineen horizontalmente */
+    flex-wrap: wrap;
+    /*Permitir que se envuelvan en una nueva línea cuando no haya suficiente espacio */
+    justify-content: space-evenly;
+    /* Espaciado uniforme entre los formularios */
+    max-width: 1400px;
+    /* Establece un ancho máximo para evitar que los formularios se estiren demasiado */
+    margin: 10px;
+    /* Centra el contenido en la página */
+
+}
+
+.form1 {
+    width: calc(33.33% - 20px);
+    /* Asegura que cada formulario ocupe aproximadamente un tercio del espacio disponible */
+    margin: 0 5px;
+    /* Espaciado entre los formularios */
+    display: flexbox;
+    background-color: #4CAF50;
+    border-radius: 15px;
+}
+
+.casilla {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(186, 218, 131);
+    border-radius: 8px;
+    padding: 3%;
+    margin: 2%;
+    gap: 10px;
+}
+
+.input-numero {
+    width: 80px;
+}
+
+.casilla2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(186, 218, 131);
+    border-radius: 8px;
+    padding: 3%;
+    margin: 2%;
+    min-width: max-content;
+    gap: 10px;
+}
+
+
+/* fin main publicar*/
+
+/* inicio main contacto */
+
+/*********
+    CONTACTO
+    *********/
+
+#contact__header {
+    background-color: rgb(218, 250, 223);
+    display: grid;
+}
+
+.contact__title {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.contact__section {
+    margin-left: 5%;
+}
+
+.contact__page {
+    background-color: rgb(218, 250, 223);
+    height: 100%;
+}
+
+/*estilos descripcion etiquetas*/
+.mb-3 {
+    margin-top: 0;
+    /*espacio entre el texto y el titulo*/
+    font-size: 15px;
+    text-align: justify;
+    align-items: center;
+    width: 40%;
+}
+
+/*estilos etiquetas*/
+.form-label {
+    font-weight: bold;
+    /* Texto en negrita */
+    color: #333;
+}
+
+/*estilos contenedor de texto*/
+.form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    /* Espaciado interno */
+    border: 2px solid #000000;
+    /* Borde alrededor del campo */
+    border-radius: 5px;
+}
+
+/*estilo del boton de envío*/
+.envio__button {
+    background-color: #3a3333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el botón */
+    margin-bottom: 10px;
+    /*espacio inferior*/
+    box-shadow: 2px 4px 2px 2px rgba(70, 70, 70, 0.8);
+}
+
+/*boton de envio pulsado*/
+.envio__button:hover {
+    background-color: #0056b3;
+    /* Color de fondo del botón en hover */
+}
+
+#contact__footer {
+    width: 100%;
+    background-color: #82d1a0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Crea tres columnas de igual ancho */
+    grid-template-rows: (1, 100%);
+    grid-gap: 10px;
+    /* Espacio entre las columnas */
+}
+
+#by {
+    background-color: #5e9774;
+    text-align: center;
+}
+
+.contact__by {
+    font-size: 15px;
+}
+
+/* fin main contacto */
+
+/* inicio pie de pagina */
+.pie {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    background-image: url('../IMG/pie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 10px;
+
+    align-items: center;
+    /* Centramos verticalmente el contenido */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    max-height: 150px;
+}
+
+.column {
+    height: 100%;
+    padding: 10px;
+    /* Espaciado interno para las columnas (opcional) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPie {
+    justify-content: center;
+    align-self: center;
+    max-width: 100px;
+    max-height: 84px;
+}
+
+.columnPie {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    grid-template-rows: (3, 33%);
+    grid-template-areas: "c1"
+        "c2"
+        "c3";
+}
+
+.pieArea1 {
+    text-align: center;
+    grid-area: c1;
+}
+
+.pieArea3 {
+    text-align: center;
+    grid-area: c3;
+}
+
+.pieArea2 {
+    text-align: center;
+    grid-area: c2;
+}
+
+.pieArea2 img {
+    max-width: 50px;
+}
+
+/* Estilos para pantallas pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+    .grid-container-nav>div {
+        height: 80px;
+
+        align-items: center;
+        /* Centramos verticalmente el contenido */
+        border-radius: 5px;
+    }
+
+    .selectorPrincipal {
+        height: 300px;
+    }
+
+    .pie {
+        height: 380px;
+    }
+
+    .form1 {
+        width: 100%;
+    }
+
+}
+
+/* Estilos para pantallas medianas (769px a 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .grid-container-nav>div {
+        height: 120px;
+        align-items: center;
+        /* Centramos verticalmente el contenido */
+        border-radius: 5px;
+    }
+
+    .selectorPrincipal {
+        height: 500px;
+    }
+
+    .pie {
+        height: 380px;
+    }
+
+    .form1 {
+        width: 40%;
+    }
+
+}
+
+/* Estilos para pantallas grandes (más de 1024px) */
+@media screen and (min-width: 1025px) {
+    /* Agrega tus estilos específicos para pantallas grandes aquí */
+}
+
+.container-section {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(218, 250, 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-registrar {
+    width: 100%;
+    max-width: 450px;
+    background-color: #acdef1;
+    padding: 50px 60px 50px;
+    text-align: justify;
+    border-radius: 25px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #000000;
+    position: relative;
+}
+
+.container-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.usuario-loguin{
+    font-size: 20px;
+    color: #4CAF50;
+}

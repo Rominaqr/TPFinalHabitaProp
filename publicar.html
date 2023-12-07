@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/styles.css">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar</title>
+  <link rel="shortcut icon" href="./IMG/logo1.png">
+
+</head>
+
+<body>
+  <div id="app">
+    <nav>
+      <div class="grid-container-nav">
+        <div class="div-nav-general">
+          <a href="./index.html">
+            <div>
+              <img class="logo-nav" src="./IMG/logo1.png" alt="logo">
+            </div>
+          </a>
+        </div>
+
+        <div class="div-nav-general">
+          <img class="nombre-nav" src="./IMG/nombre1.png" alt="logo">
+        </div>
+        <div class="div-nav-general">
+          <span v-if="login">
+            <p class="usuario-loguin">Ingreso {{nombreUsuario}} !!!</p>
+          </span>
+        </div>
+        <div class="div-nav-general">
+          <span v-if="login == false || login == null">
+            <a href="./login.html">
+              <button class="button button2">Login</button>
+            </a>
+          </span>
+          <span v-if="login == false || login == null">
+            <a href="./Registrar.html">
+              <button class="button button2">Registrar</button>
+            </a>
+          </span>
+          <span v-else>
+            <a href="./index.html">
+              <button class="button button2" v-on:click="logout()">Logout</button>
+            </a>
+          </span>
+          <a href="./contacto.html">
+            <button class="button button2">Contactenos</button>
+          </a>
+          <button class="button button2">Buscar</button>
+        </div>
+      </div>
+    </nav>
+    <main class="txt-center">
+      <div class="mainPublicar">
+        <h1>¡Publicá tu propiedad!</h1>
+      </div>
+      <fieldset>
+        <form class="formPublicar" action="">
+          <div class="formA">
+            <div class="casilla">
+              <label for="id">Id</label>
+              <input type="number" name="id" id="id" disabled v-model="id">
+            </div>
+          </div>
+          <div class="formA">
+            <div class="form1">
+              <div class="casilla">
+                <label for="propiedad">Propiedad</label>
+                <select name="tipoPropiedad" id="tipoPropiedad" v-model="tipo_propiedad">
+                  <option value="Casa">Casa</option>
+                  <option value="Departamento">Departamento</option>
+                  <option value="PH">PH</option>
+                  <option value="Quinta">Quinta</option>
+                  <option value="Garage">Garage</option>
+                  <option value="Oficina">Oficina</option>
+                  <option value="Local">Local</option>
+                  <option value="Bodega / Galpón">Bodega / Galpón</option>
+                  <option value="Deposito">Depósito</option>
+                  <option value="Campo">Campo</option>
+                  <option value="Terreno / Lote">Terreno / Lote</option>
+                </select>
+              </div>
+              <div class="casilla">
+                <label for="ubicacion">Ubicación</label> <input type="text" name="ubicacion" id="ubicacion"
+                  v-model="ubicacion">
+              </div>
+              <div class="casilla">
+                <label for="superficie">Superficie total en m²</label> <input class="input-numero" type="number"
+                  name="superficie" id="superficie" v-model="superficie">
+              </div>
+              <div class="casilla">
+                <label for="ambientes">Ambientes</label> <input class="input-numero" type="number" name="ambientes"
+                  id="ambientes" v-model="ambiente">
+              </div>
+              <div class="casilla">
+                <label for="baños">Baños</label> <input class="input-numero" type="number" name="baños" id="baños"
+                  v-model="banio">
+              </div>
+              <div class="casilla">
+                <label for="dormitorios">Dormitorios</label> <input class="input-numero" type="number"
+                  name="dormitorios" id="dormitorios" v-model="dormitorio">
+              </div>
+              <div class="casilla">
+                <label for="cocheras">Cocheras</label> <input class="input-numero" type="number" name="cocheras"
+                  id="cocheras" v-model="cochera">
+              </div>
+            </div>
+            <div class="form1">
+              <div>
+                <div>
+                  <h5>Antigüedad</h5>
+                </div>
+                <div class="casilla2">
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad"
+                      value="En construcción">
+                    <label for="antiguedad">En construcción</label>
+                  </div>
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad" value="A estrenar">
+                    <label for="antiguedad">A estrenar</label>
+                  </div>
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad" value="Hasta 10 años">
+                    <label for="antiguedad">Hasta 10 años</label>
+                  </div>
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad" value="Hasta 20 años">
+                    <label for="antiguedad">Hasta 20 años</label>
+                  </div>
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad" value="Hasta 50 años">
+                    <label for="antiguedad">Hasta 50 años</label>
+                  </div>
+                  <div><input type="radio" name="antiguedad" id="antiguedad" v-model="antiguedad"
+                      value="Más de 50 años">
+                    <label for="antiguedad">Más de 50 años</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Tipo de anunciante</h5>
+                </div>
+                <div class="casilla2">
+                  <div><input type="radio" name="tipoAnunciante" id="tipoAnunciante" v-model="tipo_anunciante"
+                      value="Todos"> <label for="tipoAnunciante">Todos</label> </div>
+                  <div><input type="radio" name="tipoAnunciante" id="tipoAnunciante" v-model="tipo_anunciante"
+                      value="Inmobiliaria"> <label for="tipoAnunciante">Inmobiliaria</label></div>
+                  <div><input type="radio" name="tipoAnunciante" id="tipoAnunciante" v-model="tipo_anunciante"
+                      value="Dueño directo"> <label for="tipoAnunciante">Dueño directo</label></div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="form1">
+              <div>
+                <div>
+                  <h5>¿Alquilás o vendés?</h5>
+                </div>
+                <div class="casilla2">
+                  <div><input type="radio" name="tipoVenta" id="tipo_venta" v-model="tipo_venta" value="Alquilar">
+                    <label for="tipoVenta">Alquilar</label></div>
+                  <div><input type="radio" name="tipoVenta" id="tipo_venta" v-model="tipo_venta" value="Vender"> <label
+                      for="tipoVenta">Vender</label></div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Mostrá tu propiedad</h5>
+                </div>
+                <div class="casilla2">
+                  <div>
+                    <div>
+                      <label for="imagen">URL imagen:</label>
+                      <br>
+                      <input type="text" id="url_imagen" name="url_imagen" v-model="url_imagen">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Elegí un precio</h5>
+                </div>
+                <div class="casilla2">
+                  <div><input type="radio" name="precioProp" id="moneda" v-model="moneda" value="Pesos"> <label
+                      for="precioProp">Pesos</label></div>
+                  <div><input type="radio" name="precioProp" id="moneda" v-model="moneda" value="Dolares"> <label
+                      for="precioProp">Dolares</label>
+                  </div>
+                  <div><input type="number" name="numPrecio" id="numPrecio" v-model="importe"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </fieldset>
+      <span v-if="editar">
+        <div>
+          <input class="btnAnunciar" type="button" value="¡Modificar Publicación!" v-on:click="modificar()">
+        </div>
+      </span>
+      <span v-else>
+        <div>
+          <input class="btnAnunciar" type="button" value="¡Publicar!" v-on:click="guardar()">
+        </div>
+      </span>
+    </main>
+  </div>
+  <footer class="pie">
+    <div class="grid-container">
+      <div class="column">
+        <img class="imgPie" src="./IMG/nombre1.png" alt="">
+      </div>
+      <div class="column">
+        <div class="pieArea3">
+          <div class="mapouter">
+            <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Av. Gral. Paz 12206-12140, Buenos Aires&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                href="https://embed-googlemap.com"></a></div>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                width: 300px;
+                height: 130px;
+              }
+
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                width: 300px;
+                height: 130px;
+              }
+
+              .gmap_iframe {
+                width: 300px !important;
+                height: 130px !important;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+      <div class="column columnPie">
+        <div class="pieArea1">
+          <h4>Nuestras redes</h4>
+        </div>
+        <div class="pieArea2">
+          <a href="https://www.linkedin.com/" target="_blank"><img src="./IMG/linkedin.png" alt="linkedin"></a>
+          <a href="https://www.whatsapp.com/" target="_blank"><img src="./IMG/whatsapp.png" alt="whatsapp"></a>
+        </div>
+        <div class="pieArea3">
+          <a href="">
+            <h8>By CodoCreadores</h8>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="./JS/script.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./JS/apiPropiedad.js"></script>
+</body>
+
+</html>

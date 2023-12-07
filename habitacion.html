@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./CSS/styles.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitación</title>
+    <link rel="shortcut icon" href="./IMG/logo1.png">
+    <link rel="stylesheet" href="./CSS/items.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <div class="grid-container-nav">
+                <div class="div-nav-general">
+                    <a href="./index.html">
+                        <div>
+                            <img class="logo-nav" src="./IMG/logo1.png" alt="logo">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="div-nav-general">
+                    <img class="nombre-nav" src="./IMG/nombre1.png" alt="logo">
+                </div>
+                <div class="div-nav-general">
+                    <span v-if="login">
+                        <p class="usuario-loguin">Ingreso {{nombreUsuario}} !!!</p>
+                    </span>
+                </div>
+                <div class="div-nav-general">
+                    <span v-if="login == false || login == null">
+                        <a href="./login.html">
+                            <button class="button button2">Login</button>
+                        </a>
+                    </span>
+                    <span v-if="login == false || login == null">
+                        <a href="./Registrar.html">
+                            <button class="button button2">Registrar</button>
+                        </a>
+                    </span>
+                    <span v-else>
+                        <a href="./index.html">
+                            <button class="button button2" v-on:click="logout()">Logout</button>
+                        </a>
+                    </span>
+                    <a href="./contacto.html">
+                        <button class="button button2">Contactenos</button>
+                    </a>
+                    <button class="button button2">Buscar</button>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="carrusel">
+                <div class="carrusel-items">
+                    <div v-for='elemento in data' class="carrusel-item">
+                        <img v-bind:src="elemento.thumbnail" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div id="habitacion" class="container">
+                <div class="contenedor-card">
+                    <div class="row" v-for='elemento in data'>
+                        <span v-if="elemento.title.includes('Habitac')">
+                            <div class="card">
+                                <img v-bind:src="elemento.thumbnail" alt="Imagen de la tarjeta">
+                                <div class="contenido">
+                                    <h3>{{elemento.title}}</h3>
+                                    <p> {{elemento.location.address_line}} {{elemento.location.city.name}} </p>
+                                    <a class="button" v-on:click="handleClick(elemento.id)">Ver detalle</a>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="pie">
+        <div class="grid-container">
+            <div class="column">
+                <img class="imgPie" src="./IMG/nombre1.png" alt="">
+            </div>
+            <div class="column">
+                <div class="pieArea3">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no"
+                                marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Av. Gral. Paz 12206-12140, Buenos Aires&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                                href="https://embed-googlemap.com"></a></div>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                width: 300px;
+                                height: 130px;
+                            }
+
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                width: 300px;
+                                height: 130px;
+                            }
+
+                            .gmap_iframe {
+                                width: 300px !important;
+                                height: 130px !important;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+            <div class="column columnPie">
+                <div class="pieArea1">
+                    <h4>Nuestras redes</h4>
+                </div>
+                <div class="pieArea2">
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="./IMG/linkedin.png"
+                            alt="linkedin"></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><img src="./IMG/whatsapp.png"
+                            alt="whatsapp"></a>
+                </div>
+                <div class="pieArea3">
+                    <a href="">
+                        <h8>By CodoCreadores</h8>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./JS/api.js"></script>
+    <script src="./JS/carrusel.js"></script>
+</body>
+
+</html>
